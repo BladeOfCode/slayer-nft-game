@@ -19,16 +19,10 @@ const App = () => {
   // Actions
   const checkIfWalletIsConnected = async () => {
     try {
-      /*
-      * First make sure we have access to window.ethereum
-      */
       const { ethereum } = window;
 
       if (!ethereum) {
         console.log('Make sure you have MetaMask!');
-        /*
-         * We set isLoading here because we use return in the next line
-         */
         setIsLoading(false);
         return;
       } else {
